@@ -13,7 +13,7 @@ const options = yargs(process.argv.slice(2))
  .option("j", { alias: "json", describe: "Echo pretty JSON and exit", type: "string" })
  .argv;
 
-if (options.help) {
+if (options.h) {
   console.log("Usage: galosh.js [options] -[n|s] LATITUDE -[e|w] LONGITUDE -z TIME_ZONE");
   console.log("    -h            Show this help message and exit.");
   console.log("    -n, -s        Latitude: N positive; S negative.");
