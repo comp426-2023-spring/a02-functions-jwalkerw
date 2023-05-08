@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import yargs from 'yargs/yargs';
+import moment from 'moment-timezone';
 
 const options = yargs(process.argv.slice(2))
  .usage("Usage: galosh.js [options] -[n|s] LATITUDE -[e|w] LONGITUDE -z TIME_ZONE")
@@ -14,3 +15,4 @@ const options = yargs(process.argv.slice(2))
  .option("j", { alias: "json", describe: "Echo pretty JSON and exit", type: "string" })
  .argv;
 
+const timezone = moment.tz.guess();
