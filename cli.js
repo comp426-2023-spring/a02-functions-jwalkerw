@@ -55,7 +55,7 @@ if (day == 1) {
 }
 
 // Percipitation
-if (meteoData.daily.percipitation_hours[day] > 0) {
+if (meteoData.daily.precipitation_hours[days] > 0) {
     console.log("You might need your galoshes" + dayVar);
 } else {
     console.log("You will not need your galoshes" + dayVar);
