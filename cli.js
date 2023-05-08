@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 
-import yargs from './yargs';
+import * as yargs from 'yargs';
 
 const options = yargs
- .usage("Usage: galosh.js [options] -[n|s] LATITUDE -[e|w] LONGITUDE -z TIME_ZONE")
  .option("h", { alias: "help", describe: "Help message", type: "string" })
  .option("n", { alias: "north", describe: "Latitude: N positive", type: "string" })
  .option("s", { alias: "south", describe: "Latitude: S negative", type: "string" })
