@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-
 import minimist from 'minimist';
 import moment from 'moment-timezone';
 import fetch from "node-fetch";
@@ -30,7 +29,7 @@ const longitude = options.e || (-1 * options.w);
 // Open-Meteo API
 const openMeteo = await fetch("https://api.open-meteo.com/v1/forecast?latitude=" + latitude + "&longitude=" + longitude + "&daily=precipitation_hours&current_weather=true&timezone=" + timezone);
 // Open-Meteo API Data
-const meteoData = await openMeteo.json();
+const meteoData = await(openMeteo.json());
 
 // Json Option
 if (options.j) {
@@ -39,7 +38,13 @@ if (options.j) {
 }
 
 // Day
-const day = options.d ?? 1;
+var day;
+if (options.d == null) {
+	day = 1;
+} else {
+	day = options.d;
+}
+// Day String
 var dayVar;
 if (day == 1) {
     dayVar = " tomorrow.";
