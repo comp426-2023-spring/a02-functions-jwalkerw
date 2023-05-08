@@ -1,11 +1,8 @@
 #!/usr/bin/env node
 
-import esmPlatformShim from './lib/platform-shims/esm.mjs';
-import {YargsFactory} from './build/lib/yargs-factory.js';
+import yargs from 'yargs/yargs';
 
-const yargs = YargsFactory(esmPlatformShim);
-
-const options = yargs
+const options = yargs(process.argv.slice(2))
  .option("h", { alias: "help", describe: "Help message", type: "string" })
  .option("n", { alias: "north", describe: "Latitude: N positive", type: "string" })
  .option("s", { alias: "south", describe: "Latitude: S negative", type: "string" })
