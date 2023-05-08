@@ -4,7 +4,7 @@ import yargs from 'yargs/yargs';
 
 const options = yargs(process.argv.slice(2))
  .usage("Usage: galosh.js [options] -[n|s] LATITUDE -[e|w] LONGITUDE -z TIME_ZONE")
- .option("h", { alias: "help", describe: "Help message", type: "string" })
+ .help("h")
  .option("n", { alias: "north", describe: "Latitude: N positive", type: "string" })
  .option("s", { alias: "south", describe: "Latitude: S negative", type: "string" })
  .option("e", { alias: "east", describe: "Longitude: E positive", type: "string" })
