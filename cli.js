@@ -39,7 +39,7 @@ if (options.j) {
 }
 
 // Day
-const day = arg.d ?? 1;
+const day = options.d ?? 1;
 var dayVar;
 if (day == 1) {
     dayVar = " tomorrow.";
