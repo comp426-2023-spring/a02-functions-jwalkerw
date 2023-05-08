@@ -44,7 +44,7 @@ var dayVar;
 if (day == 1) {
     dayVar = " tomorrow.";
 } else if (day > 1) {
-    dayVar = " in " + day " days.";
+    dayVar = " in " + day + " days.";
 } else if (day == 0) {
     dayVar = " today."
 }
