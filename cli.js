@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 
-import * as yargs from 'yargs';
+import esmPlatformShim from './lib/platform-shims/esm.mjs';
+import {YargsFactory} from './build/lib/yargs-factory.js';
+
+const yargs = YargsFactory(esmPlatformShim);
 
 const options = yargs
  .option("h", { alias: "help", describe: "Help message", type: "string" })
