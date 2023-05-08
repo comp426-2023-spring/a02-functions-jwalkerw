@@ -20,4 +20,4 @@ if (options.h) {
  process.exit(0);
 }
 
-const timezone = moment.tz.guess();
+const timezone = options.z ?? moment.tz.guess();
