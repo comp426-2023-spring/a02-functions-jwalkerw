@@ -43,7 +43,7 @@ const day = arg.d ?? 1;
 var dayVar;
 if (day == 1) {
     dayVar = " tomorrow.";
-} else if (day > 1 && day < 7) {
+} else if (day > 1) {
     dayVar = " in " + day " days.";
 } else if (day == 0) {
     dayVar = " today."
