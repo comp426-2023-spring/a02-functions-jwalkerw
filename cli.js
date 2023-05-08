@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const yargs = require("yargs");
+import yargs from 'yargs';
 
 const options = yargs
  .usage("Usage: galosh.js [options] -[n|s] LATITUDE -[e|w] LONGITUDE -z TIME_ZONE")
