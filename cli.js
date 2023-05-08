@@ -3,6 +3,7 @@
 import yargs from 'yargs/yargs';
 
 const options = yargs(process.argv.slice(2))
+ .usage("Usage: galosh.js [options] -[n|s] LATITUDE -[e|w] LONGITUDE -z TIME_ZONE")
  .option("h", { alias: "help", describe: "Help message", type: "string" })
  .option("n", { alias: "north", describe: "Latitude: N positive", type: "string" })
  .option("s", { alias: "south", describe: "Latitude: S negative", type: "string" })
@@ -13,7 +14,7 @@ const options = yargs(process.argv.slice(2))
  .option("j", { alias: "json", describe: "Echo pretty JSON and exit", type: "string" })
  .argv;
 
-if (options.h) {
+if (options.help) {
  console.log("Usage: galosh.js [options] -[n|s] LATITUDE -[e|w] LONGITUDE -z TIME_ZONE");
  console.log("    -h            Show this help message and exit.");
  console.log("    -n, -s        Latitude: N positive; S negative.");
@@ -21,5 +22,4 @@ if (options.h) {
  console.log("    -z            Time zone: uses tz.guess() from moment-timezone by default.");
  console.log("    -d 0-6        Day to retrieve weather: 0 is today; defaults to 1.");
  console.log("    -j            Echo pretty JSON from open-meteo API and exit.");
- exit 0;
 }
