@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import {yargs} from 'yargs/yargs';
+import yargs from 'yargs/yargs';
 
 const options = yargs(process.argv.slice(2))
  .option("h", { alias: "help", describe: "Help message", type: "string" })
